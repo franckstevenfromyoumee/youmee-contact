@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOUMEE & Co. — Votre chauffeur</title>
+<style>
+  :root{
+    --ink:#101a17;
+    --cream:#f5f1e8;
+    --gold:#b8863f;
+    --gold-dark:#8a6329;
+    --green:#1f3d33;
+    --green-light:#2c5445;
+    --line: rgba(16,26,23,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--green);
+    color: var(--cream);
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+    padding: 24px 16px 60px;
+  }
+  .card{
+    width:100%;
+    max-width:420px;
+  }
+  .brand{
+    text-align:center;
+    padding: 12px 0 28px;
+  }
+  .brand .mark{
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+  }
+  .brand h1{
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  .brand p{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: rgba(245,241,232,0.65);
+    margin-top: 6px;
+  }
+  .driver{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background: rgba(245,241,232,0.06);
+    border: 1px solid rgba(245,241,232,0.15);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .driver .initials{
+    width:48px; height:48px;
+    border-radius:50%;
+    background: var(--gold);
+    color: var(--green);
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    display:flex; align-items:center; justify-content:center;
+    font-size:17px;
+    flex-shrink:0;
+  }
+  .driver .info p:first-child{
+    font-size:16px;
+  }
+  .driver .info p:last-child{
+    font-family: Arial, sans-serif;
+    font-size:12px;
+    color: rgba(245,241,232,0.6);
+    margin-top:2px;
+  }
+  .actions{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom: 28px;
+  }
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background: rgba(245,241,232,0.04);
+    border: 1px solid rgba(245,241,232,0.18);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration:none;
+    color: var(--cream);
+    transition: background 0.15s ease;
+  }
+  .btn:active{
+    background: rgba(245,241,232,0.12);
+  }
+  .btn.primary{
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--green);
+  }
+  .btn .icon{
+    width:34px; height:34px;
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%;
+    background: rgba(245,241,232,0.1);
+    font-family: Arial, sans-serif;
+    font-size:16px;
+  }
+  .btn.primary .icon{
+    background: rgba(31,61,51,0.15);
+  }
+  .btn .txt strong{
+    display:block;
+    font-family: Arial, sans-serif;
+    font-size:14.5px;
+    font-weight:600;
+    letter-spacing:0.2px;
+  }
+  .btn .txt span{
+    display:block;
+    font-family: Arial, sans-serif;
+    font-size:12px;
+    opacity:0.75;
+    margin-top:2px;
+  }
+  .section-label{
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(245,241,232,0.5);
+    margin: 30px 0 12px;
+    padding-left: 2px;
+  }
+  .plans{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom: 26px;
+  }
+  .plan{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border: 1px solid rgba(245,241,232,0.15);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-decoration:none;
+    color: var(--cream);
+  }
+  .plan .name{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .plan .desc{
+    font-family: Arial, sans-serif;
+    font-size: 11.5px;
+    color: rgba(245,241,232,0.55);
+    margin-top:2px;
+  }
+  .plan .arrow{
+    font-size: 18px;
+    color: var(--gold);
+  }
+  .footer{
+    text-align:center;
+    font-family: Arial, sans-serif;
+    font-size: 11.5px;
+    color: rgba(245,241,232,0.4);
+    margin-top: 30px;
+    line-height:1.6;
+  }
+  .footer a{
+    color: var(--gold);
+    text-decoration:none;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="brand">
+    <div class="mark">MOBILITÉ PERSONNALISÉE</div>
+    <h1>YOUMEE &amp; Co.</h1>
+    <p>Casablanca · Trajets urbains, interurbains &amp; aéroport</p>
+  </div>
+
+  <div class="driver">
+    <div class="initials">FS</div>
+    <div class="info">
+      <p>Franck Steven</p>
+      <p>Votre chauffeur aujourd'hui</p>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a class="btn primary" href="contact-franck-youmee.vcf" download>
+      <div class="icon">＋</div>
+      <div class="txt">
+        <strong>Enregistrer mon contact</strong>
+        <span>Ajoutez-moi directement à vos contacts</span>
+      </div>
+    </a>
+
+    <a class="btn" href="https://wa.me/212655795422?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20course%20avec%20YOUMEE" target="_blank">
+      <div class="icon">↗</div>
+      <div class="txt">
+        <strong>Réserver ma prochaine course</strong>
+        <span>Ouvre WhatsApp, message pré-rempli</span>
+      </div>
+    </a>
+
+    <a class="btn" href="https://wa.me/212655795422?text=Bonjour%2C%20je%20souhaite%20laisser%20un%20avis%20sur%20ma%20course%20YOUMEE" target="_blank">
+      <div class="icon">★</div>
+      <div class="txt">
+        <strong>Laisser un avis</strong>
+        <span>30 secondes, ça aide énormément</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="section-label">S'ABONNER</div>
+  <div class="plans">
+    <a class="plan" href="https://wa.me/212655795422?text=Bonjour%2C%20l%27abonnement%20URBAIN%20m%27int%C3%A9resse" target="_blank">
+      <div>
+        <div class="name">Urbain</div>
+        <div class="desc">Trajets réguliers dans Casablanca</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="plan" href="https://wa.me/212655795422?text=Bonjour%2C%20l%27abonnement%20INTERURBAIN%20m%27int%C3%A9resse" target="_blank">
+      <div>
+        <div class="name">Interurbain</div>
+        <div class="desc">Liaisons régulières entre villes</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="plan" href="https://wa.me/212655795422?text=Bonjour%2C%20l%27abonnement%20A%C3%89ROPORT%20m%27int%C3%A9resse" target="_blank">
+      <div>
+        <div class="name">Aéroport</div>
+        <div class="desc">Navettes récurrentes, pro ou perso</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+  <div class="section-label">PARRAINAGE</div>
+  <div class="plans">
+    <a class="plan" href="https://wa.me/212655795422?text=Bonjour%2C%20je%20souhaite%20parrainer%20un%20proche%20chez%20YOUMEE" target="_blank">
+      <div>
+        <div class="name">Parrainer un proche</div>
+        <div class="desc">-20% offert à vous deux sur la prochaine course</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+  <div class="footer">
+    Catalogue tarifaire complet sur notre <a href="https://wa.me/212655795422" target="_blank">WhatsApp Business</a><br>
+    +212 6 55 79 54 22 — YOUMEE &amp; Co.
+  </div>
+
+</div>
+</body>
+</html>
